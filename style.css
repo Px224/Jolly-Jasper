@@ -3,11 +3,22 @@ body {
     font-family: sans-serif;
 }
 
-/* Navbar */
+/* ===========================
+   Navbar
+=========================== */
+
 #navbar {
     background-color: #373376;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar ul {
@@ -22,52 +33,53 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
     background-color: #2b1c61;
     border-radius: 5px;
 }
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
 
-/* โลโก้ */
-/* โลโก้ */
+/* Logo */
+
 .logo {
     color: white;
     font-weight: bold;
     font-size: 30px;
-    margin-left: 20px; /* 👈 เพิ่มระยะห่างด้านซ้าย */
+    margin-left: 20px;
 }
 
-/* สีคำว่า Jester */
 .logo span {
-    color: #f7e8a4; /* 👈 เหลืองพาสเทล */
+    color: #f7e8a4;
 }
 
+/* ===========================
+   Hero
+=========================== */
 
-/* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    padding: 0 80px;
 
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url("ele.png");
+
     background-size: cover;
     background-position: center;
 }
 
-/* Content */
 .content {
     max-width: 600px;
+}
+
+.content h1 {
+    font-size: 80px;
+    color: white;
+    margin-bottom: 30px;
 }
 
 .content h2 {
@@ -77,34 +89,27 @@ body {
     margin-bottom: 20px;
 }
 
-.content h1 {
-    font-size: 80px;
-    color: #ffffff;
-    margin-bottom: 30px;
-}
-
 /* Button */
 
 .btn a {
-    padding: 20px 25px;
+    display: inline-block;
+    padding: 20px 30px;
     background-color: #373376;
-    border: none;
-    border-radius: 40px;
-    width: 20%;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    border-radius: 40px;
     font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+    transition: 0.3s;
 }
 
 .btn a:hover {
     background-color: #aaa2c8;
 }
 
-/*cal page*/
-/* Section background */
+/* ===========================
+   Calculator
+=========================== */
+
 .calculator {
     min-height: 100vh;
     display: flex;
@@ -113,7 +118,7 @@ body {
     padding: 40px;
 
     background:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* 👈 overlay ทำให้ตัวหนังสือเด่น */
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("image.png");
 
     background-size: cover;
@@ -121,24 +126,26 @@ body {
 }
 
 /* Card */
+
 .card {
     background: white;
+    width: 100%;
+    max-width: 420px;
+
     padding: 50px 40px;
     border-radius: 20px;
-    width: 420px; /* 👈 ใหญ่ขึ้น */
-    
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
     text-align: center;
 
     transition: 0.3s;
 }
 
-/* hover effect */
 .card:hover {
     transform: translateY(-5px);
 }
 
-/* Title */
 .card h1 {
     color: #373376;
     margin-bottom: 30px;
@@ -146,6 +153,7 @@ body {
 }
 
 /* Form */
+
 .form-group {
     text-align: left;
     margin-bottom: 20px;
@@ -157,179 +165,736 @@ body {
 }
 
 /* Input */
+
 .form-group input {
     width: 100%;
+    box-sizing: border-box;
+
     padding: 12px;
     margin-top: 8px;
+
     border-radius: 10px;
     border: 1px solid #ddd;
-    font-size: 14px;
 
+    font-size: 14px;
     transition: 0.2s;
 }
 
-/* focus effect */
 .form-group input:focus {
     border-color: #373376;
     outline: none;
-    box-shadow: 0 0 5px rgba(55, 51, 118, 0.3);
+    box-shadow: 0 0 5px rgba(55,51,118,.3);
 }
 
 /* Button */
+
 button {
+
     width: 100%;
+
     padding: 14px;
+
     margin-top: 10px;
 
-    background: linear-gradient(135deg, #373376, #5a54c4);
+    background: linear-gradient(135deg,#373376,#5a54c4);
+
     color: white;
 
     border: none;
+
     border-radius: 10px;
+
     font-size: 16px;
+
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: .3s;
+
 }
 
-/* button hover */
 button:hover {
+
     transform: scale(1.03);
-    box-shadow: 0 5px 15px rgba(55, 51, 118, 0.4);
+
+    box-shadow: 0 5px 15px rgba(55,51,118,.4);
+
 }
 
 /* Result */
+
 #result {
-    margin-top: 25px;
-    font-size: 18px;
-    color: #373376;
-    font-weight: bold;
-}
-/*knowledge*/
-/* Section */
-.info {
-    padding: 50px 20px;
-    background-color: #f4f6ff;
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    color:#373376;
+
+    font-weight:bold;
+
 }
 
-/* Container */
-.container {
-    max-width: 900px;
-    margin: auto;
+/* ===========================
+   Knowledge
+=========================== */
+
+.info{
+
+    padding:50px 20px;
+
+    background:#f4f6ff;
+
 }
 
-/* Headings */
-h1 {
-    color: #373376;
+.container{
+
+    max-width:900px;
+
+    margin:auto;
+
 }
 
-h2 {
-    margin-top: 40px;
-    color: #2b1c61;
+h1{
+
+    color:#373376;
+
+}
+
+h2{
+
+    margin-top:40px;
+
+    color:#2b1c61;
+
 }
 
 /* Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
 }
 
-table th {
-    background-color: #373376;
-    color: white;
-    padding: 10px;
+table th{
+
+    background:#373376;
+
+    color:white;
+
+    padding:10px;
+
 }
 
-table td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+table td{
+
+    padding:10px;
+
+    border-bottom:1px solid #ccc;
+
 }
 
-/* Example Box */
-.example {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: white;
-    border-left: 5px solid #373376;
-    border-radius: 8px;
+/* Example */
+
+.example{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:white;
+
+    border-left:5px solid #373376;
+
+    border-radius:8px;
+
 }
 
-/*contact*/
-/* Section */
-/* Section */
-.team {
-    max-width: 900px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 20px;
+/* ===========================
+   Contact
+=========================== */
+
+.team{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+    padding:0 20px;
+
 }
 
-/* Card */
-.member-card {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.member-card{
 
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
+    display:flex;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    align-items:center;
+
+    gap:30px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
 }
 
-/* hover */
-.member-card:hover {
-    transform: translateY(-5px);
+.member-card:hover{
+
+    transform:translateY(-5px);
+
 }
 
-/* Image */
-.member-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 15px;
-    object-fit: cover;
+.member-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:15px;
+
+    object-fit:cover;
+
 }
 
-/* Info */
-.info h2 {
-    margin: 0;
-    color: #373376;
+.info h2{
+
+    margin:0;
+
+    color:#373376;
+
 }
 
-.role {
-    color: #777;
-    margin: 5px 0 10px;
+.role{
+
+    color:#777;
+
+    margin:5px 0 10px;
+
 }
 
-/* text */
-.info p {
-    margin: 3px 0;
-    font-size: 14px;
+.info p{
+
+    margin:3px 0;
+
+    font-size:14px;
+
 }
 
-.contact h1{
-    font-size: 60px;
-}
-.contact-page h1 {
-    text-align: center;
-    color: #373376;
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    position: relative;
+.contact-page h1{
+
+    text-align:center;
+
+    color:#373376;
+
+    font-size:36px;
+
+    margin-top:40px;
+
+    margin-bottom:20px;
+
+    position:relative;
+
 }
 
-/* เส้นใต้ */
-.contact-page h1::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: #373376;
-    margin: 10px auto 0;
-    border-radius: 2px;
+.contact-page h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:4px;
+
+    background:#373376;
+
+    margin:10px auto 0;
+
+    border-radius:2px;
+
+}
+
+/* =====================================================
+   Responsive Design
+===================================================== */
+
+/* ---------- Desktop ขนาดกลาง ---------- */
+@media screen and (max-width: 1200px) {
+
+    .navbar{
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .hero{
+        padding: 0 50px;
+    }
+
+}
+
+/* ---------- Tablet ---------- */
+@media screen and (max-width: 992px){
+
+    /* Navbar */
+
+    .navbar{
+
+        padding:15px 20px;
+
+    }
+
+    .navbar ul{
+
+        gap:18px;
+
+    }
+
+    .logo{
+
+        font-size:28px;
+
+    }
+
+    /* Hero */
+
+    .hero{
+
+        padding:40px;
+
+    }
+
+    .content{
+
+        max-width:100%;
+
+    }
+
+    .content h1{
+
+        font-size:60px;
+
+    }
+
+    .content h2{
+
+        font-size:24px;
+
+        line-height:1.5;
+
+    }
+
+    .btn a{
+
+        padding:18px 28px;
+
+    }
+
+    /* Calculator */
+
+    .calculator{
+
+        padding:30px;
+
+    }
+
+    .card{
+
+        max-width:500px;
+
+    }
+
+    /* Contact */
+
+    .team{
+
+        padding:0 30px;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width:768px){
+
+    /* Navbar */
+
+    #navbar{
+
+        display:block;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        padding:15px;
+
+    }
+
+    .logo{
+
+        margin:0;
+
+        margin-bottom:15px;
+
+        font-size:26px;
+
+        text-align:center;
+
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+        margin:0;
+
+        padding:0;
+
+    }
+
+    .navbar li{
+
+        margin:5px;
+
+    }
+
+    .navbar a{
+
+        display:block;
+
+        padding:10px 15px;
+
+    }
+
+    /* Hero */
+
+    .hero{
+
+        min-height:90vh;
+
+        padding:25px;
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .content h1{
+
+        font-size:48px;
+
+    }
+
+    .content h2{
+
+        font-size:22px;
+
+    }
+
+    .btn{
+
+        display:flex;
+
+        justify-content:center;
+
+        margin-top:20px;
+
+    }
+
+    .btn a{
+
+        width:220px;
+
+    }
+
+    /* Calculator */
+
+    .calculator{
+
+        padding:20px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:30px 20px;
+
+        box-sizing:border-box;
+
+    }
+
+    .card h1{
+
+        font-size:26px;
+
+    }
+
+    .form-group input{
+
+        width:100%;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+    /* Knowledge */
+
+    .container{
+
+        width:100%;
+
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+    table th,
+
+    table td{
+
+        padding:12px;
+
+    }
+
+    /* Contact */
+
+    .member-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .member-card img{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+    .info h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+/* ---------- Small Mobile ---------- */
+@media screen and (max-width:480px){
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+    .navbar ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .navbar a{
+
+        padding:8px 10px;
+
+    }
+
+    .hero{
+
+        padding:20px;
+
+    }
+
+    .content h1{
+
+        font-size:36px;
+
+    }
+
+    .content h2{
+
+        font-size:18px;
+
+        line-height:1.6;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .btn a{
+
+        width:100%;
+
+        box-sizing:border-box;
+
+    }
+
+    .card{
+
+        padding:25px 15px;
+
+    }
+
+    .card h1{
+
+        font-size:22px;
+
+    }
+
+    .form-group label{
+
+        font-size:13px;
+
+    }
+
+    .form-group input{
+
+        font-size:14px;
+
+        padding:10px;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+        padding:12px;
+
+    }
+
+    #result{
+
+        font-size:16px;
+
+        line-height:1.5;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    .member-card{
+
+        padding:20px;
+
+    }
+
+    .member-card img{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+}
+
+/* ---------- Extra Small Device ---------- */
+@media screen and (max-width:360px){
+
+    .content h1{
+
+        font-size:30px;
+
+    }
+
+    .content h2{
+
+        font-size:16px;
+
+    }
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+    .navbar a{
+
+        font-size:14px;
+
+    }
+
+    .card{
+
+        padding:20px 12px;
+
+    }
+
+    .card h1{
+
+        font-size:20px;
+
+    }
+
+    button{
+
+        font-size:14px;
+
+    }
+
 }

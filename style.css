@@ -898,3 +898,119 @@ table td{
     }
 
 }
+
+/* ===========================
+   Hamburger Menu
+=========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    #navbar{
+        display:block;
+    }
+
+    .navbar{
+
+        position:relative;
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        padding:15px 20px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .navbar ul{
+
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:#373376;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:15px 0;
+
+        margin:0;
+
+        gap:0;
+
+        animation:slideDown .3s ease;
+
+    }
+
+    .navbar ul.active{
+
+        display:flex;
+
+    }
+
+    .navbar li{
+
+        width:100%;
+
+    }
+
+    .navbar a{
+
+        display:block;
+
+        padding:15px;
+
+    }
+
+    .navbar a:hover{
+
+        background:#2b1c61;
+
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
